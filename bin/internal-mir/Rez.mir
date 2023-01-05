@@ -1,0 +1,258 @@
+[ @file = "Rez.mc"; @line = 1; ]
+module Rez {
+    [ @file = "Rez.mc"; @line = 1; ]
+    <init> {
+    }
+    [ @file = "Rez.mc"; @line = 2; ]
+    module Drawables {
+        [ @file = "Rez.mc"; @line = 2; ]
+        <init> {
+        }
+        [ @file = "Rez.mc"; @line = 3; ]
+        import Toybox.Lang;
+        [ @file = "Rez.mc"; @line = 4; @position = 19; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "Rez.mc"; @line = 6; ]
+    module Fonts {
+        [ @file = "Rez.mc"; @line = 6; ]
+        <init> {
+        }
+    }
+    [ @file = "Rez.mc"; @line = 8; ]
+    module JsonData {
+        [ @file = "Rez.mc"; @line = 8; ]
+        <init> {
+        }
+    }
+    [ @file = "Rez.mc"; @line = 10; ]
+    module Layouts {
+        [ @file = "Rez.mc"; @line = 10; ]
+        <init> {
+        }
+        [ @file = "Rez.mc"; @line = 11; ]
+        import Toybox.Lang;
+        [ @file = "Rez.mc"; @line = 12; ]
+        using Toybox.WatchUi;
+        [ @file = "Rez.mc"; @line = 13; ]
+        using Toybox.WatchUi as :Ui;
+        [ @file = "Rez.mc"; @line = 14; ]
+        using Toybox.Graphics;
+        [ @file = "Rez.mc"; @line = 15; ]
+        using Toybox.Graphics as :Gfx;
+        [ @file = "Rez.mc"; @line = 17; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+Rez_mc_17_70_start:
+[ "Rez.mc" 20 0 ]
+            [ "Rez_mc_17_70_start" "Rez_mc_17_70_stop" ]
+            %rez_cmp_local_custom_drawable_13335258819671767624.1 = local;
+            %tmp.4 = getv ? :Background;
+            %tmp.1 = newc %tmp.4 ();
+            lputv %rez_cmp_local_custom_drawable_13335258819671767624.1 %tmp.1;
+[ "Rez.mc" 21 0 ]
+            [ "Rez_mc_17_70_start" "Rez_mc_17_70_stop" ]
+            %rez_cmp_local_text_title.2 = local;
+            %tmp.7 = getm $.Toybox.WatchUi;
+            %tmp.8 = getv function ? %tmp.7 :Text;
+            %tmp.9 = newd 6;
+            %tmp.11 = const :identifier;
+            %tmp.12 = "title";
+            %tmp.13 = dup %tmp.9;
+            %tmp.14 = aputv %tmp.13 %tmp.11 %tmp.12;
+            %tmp.16 = const :color;
+            %tmp.17 = getm $.Toybox.Graphics;
+            %tmp.18 = getv %tmp.17 :COLOR_BLACK;
+            %tmp.19 = dup %tmp.14;
+            %tmp.20 = aputv %tmp.19 %tmp.16 %tmp.18;
+            %tmp.22 = const :locX;
+            %tmp.23 = lgetv %dc;
+            %tmp.24 = getv function %tmp.23 :getWidth;
+            %tmp.25 = invoke %tmp.23 %tmp.24();
+            %tmp.26 = 0.5;
+            %tmp.27 = mul %tmp.25 %tmp.26;
+            %tmp.28 = dup %tmp.20;
+            %tmp.29 = aputv %tmp.28 %tmp.22 %tmp.27;
+            %tmp.31 = const :locY;
+            %tmp.32 = 2;
+            %tmp.33 = dup %tmp.29;
+            %tmp.34 = aputv %tmp.33 %tmp.31 %tmp.32;
+            %tmp.36 = const :justification;
+            %tmp.37 = getm $.Toybox.Graphics;
+            %tmp.38 = getv %tmp.37 :TEXT_JUSTIFY_CENTER;
+            %tmp.39 = dup %tmp.34;
+            %tmp.40 = aputv %tmp.39 %tmp.36 %tmp.38;
+            %tmp.42 = const :font;
+            %tmp.43 = getm $.Toybox.Graphics;
+            %tmp.44 = getv %tmp.43 :FONT_TINY;
+            %tmp.45 = dup %tmp.40;
+            %tmp.46 = aputv %tmp.45 %tmp.42 %tmp.44;
+            %tmp.5 = newc %tmp.8 (%tmp.46);
+            lputv %rez_cmp_local_text_title.2 %tmp.5;
+[ "Rez.mc" 22 0 ]
+            [ "Rez_mc_17_70_start" "Rez_mc_17_70_stop" ]
+            %rez_cmp_local_text_heartrate.3 = local;
+            %tmp.49 = getm $.Toybox.WatchUi;
+            %tmp.50 = getv function ? %tmp.49 :Text;
+            %tmp.51 = newd 6;
+            %tmp.53 = const :identifier;
+            %tmp.54 = "heartrate";
+            %tmp.55 = dup %tmp.51;
+            %tmp.56 = aputv %tmp.55 %tmp.53 %tmp.54;
+            %tmp.58 = const :color;
+            %tmp.59 = getm $.Toybox.Graphics;
+            %tmp.60 = getv %tmp.59 :COLOR_BLACK;
+            %tmp.61 = dup %tmp.56;
+            %tmp.62 = aputv %tmp.61 %tmp.58 %tmp.60;
+            %tmp.64 = const :locX;
+            %tmp.65 = 60;
+            %tmp.66 = dup %tmp.62;
+            %tmp.67 = aputv %tmp.66 %tmp.64 %tmp.65;
+            %tmp.69 = const :locY;
+            %tmp.70 = 38;
+            %tmp.71 = dup %tmp.67;
+            %tmp.72 = aputv %tmp.71 %tmp.69 %tmp.70;
+            %tmp.74 = const :justification;
+            %tmp.75 = getm $.Toybox.Graphics;
+            %tmp.76 = getv %tmp.75 :TEXT_JUSTIFY_RIGHT;
+            %tmp.77 = dup %tmp.72;
+            %tmp.78 = aputv %tmp.77 %tmp.74 %tmp.76;
+            %tmp.80 = const :font;
+            %tmp.81 = getm $.Toybox.Graphics;
+            %tmp.82 = getv %tmp.81 :FONT_NUMBER_MEDIUM;
+            %tmp.83 = dup %tmp.78;
+            %tmp.84 = aputv %tmp.83 %tmp.80 %tmp.82;
+            %tmp.47 = newc %tmp.50 (%tmp.84);
+            lputv %rez_cmp_local_text_heartrate.3 %tmp.47;
+[ "Rez.mc" 24 8 ]
+            %tmp.85 = newa Array<WatchUi.Drawable> 3;
+            %tmp.87 = lgetv %rez_cmp_local_custom_drawable_13335258819671767624.1;
+            %tmp.88 = dup %tmp.85;
+            %tmp.89 = aputv %tmp.88 0 %tmp.87;
+            %tmp.91 = lgetv %rez_cmp_local_text_title.2;
+            %tmp.92 = dup %tmp.89;
+            %tmp.93 = aputv %tmp.92 1 %tmp.91;
+            %tmp.95 = lgetv %rez_cmp_local_text_heartrate.3;
+            %tmp.96 = dup %tmp.93;
+            %tmp.97 = aputv %tmp.96 2 %tmp.95;
+            ret %tmp.97;
+Rez_mc_17_70_stop:
+        }
+    }
+    [ @file = "Rez.mc"; @line = 29; ]
+    module Menus {
+        [ @file = "Rez.mc"; @line = 29; ]
+        <init> {
+        }
+    }
+    [ @file = "Rez.mc"; @line = 31; ]
+    module Strings {
+        [ @file = "Rez.mc"; @line = 31; ]
+        <init> {
+        }
+        [ @file = "Rez.mc"; @line = 32; ]
+        import Toybox.Lang;
+        [ @file = "Rez.mc"; @line = 33; @position = 19; initialized = true; ]
+        var colorPurple as Symbol;
+        [ @file = "Rez.mc"; @line = 34; @position = 19; initialized = true; ]
+        var StravaHZ as Symbol;
+        [ @file = "Rez.mc"; @line = 35; @position = 19; initialized = true; ]
+        var labelAvg as Symbol;
+        [ @file = "Rez.mc"; @line = 36; @position = 19; initialized = true; ]
+        var threshold as Symbol;
+        [ @file = "Rez.mc"; @line = 37; @position = 19; initialized = true; ]
+        var BritishCyclingHZ as Symbol;
+        [ @file = "Rez.mc"; @line = 38; @position = 19; initialized = true; ]
+        var modeAvg as Symbol;
+        [ @file = "Rez.mc"; @line = 39; @position = 19; initialized = true; ]
+        var themeRed as Symbol;
+        [ @file = "Rez.mc"; @line = 40; @position = 19; initialized = true; ]
+        var themeTitle as Symbol;
+        [ @file = "Rez.mc"; @line = 41; @position = 19; initialized = true; ]
+        var DefaultHZ as Symbol;
+        [ @file = "Rez.mc"; @line = 42; @position = 19; initialized = true; ]
+        var Zone3maxValue_title as Symbol;
+        [ @file = "Rez.mc"; @line = 43; @position = 19; initialized = true; ]
+        var averageMode as Symbol;
+        [ @file = "Rez.mc"; @line = 44; @position = 19; initialized = true; ]
+        var AppVersionTitle as Symbol;
+        [ @file = "Rez.mc"; @line = 45; @position = 19; initialized = true; ]
+        var modeAverage as Symbol;
+        [ @file = "Rez.mc"; @line = 46; @position = 19; initialized = true; ]
+        var themeNone as Symbol;
+        [ @file = "Rez.mc"; @line = 47; @position = 19; initialized = true; ]
+        var colorHigh as Symbol;
+        [ @file = "Rez.mc"; @line = 48; @position = 19; initialized = true; ]
+        var personalHeartrate as Symbol;
+        [ @file = "Rez.mc"; @line = 49; @position = 19; initialized = true; ]
+        var colorRed as Symbol;
+        [ @file = "Rez.mc"; @line = 50; @position = 19; initialized = true; ]
+        var Zone1maxValue_title as Symbol;
+        [ @file = "Rez.mc"; @line = 51; @position = 19; initialized = true; ]
+        var Zone2maxValue_title as Symbol;
+        [ @file = "Rez.mc"; @line = 52; @position = 19; initialized = true; ]
+        var modeLarge as Symbol;
+        [ @file = "Rez.mc"; @line = 53; @position = 19; initialized = true; ]
+        var HeartZoneHistory_title as Symbol;
+        [ @file = "Rez.mc"; @line = 54; @position = 19; initialized = true; ]
+        var fontSize as Symbol;
+        [ @file = "Rez.mc"; @line = 55; @position = 19; initialized = true; ]
+        var heartrateMode as Symbol;
+        [ @file = "Rez.mc"; @line = 56; @position = 19; initialized = true; ]
+        var Zone5maxValue_title as Symbol;
+        [ @file = "Rez.mc"; @line = 57; @position = 19; initialized = true; ]
+        var modePersonal as Symbol;
+        [ @file = "Rez.mc"; @line = 58; @position = 19; initialized = true; ]
+        var GarminHZ as Symbol;
+        [ @file = "Rez.mc"; @line = 59; @position = 19; initialized = true; ]
+        var colorYellow as Symbol;
+        [ @file = "Rez.mc"; @line = 60; @position = 19; initialized = true; ]
+        var title as Symbol;
+        [ @file = "Rez.mc"; @line = 61; @position = 19; initialized = true; ]
+        var calcHeartZone_title as Symbol;
+        [ @file = "Rez.mc"; @line = 62; @position = 19; initialized = true; ]
+        var themeRedInvert as Symbol;
+        [ @file = "Rez.mc"; @line = 63; @position = 19; initialized = true; ]
+        var AppName as Symbol;
+        [ @file = "Rez.mc"; @line = 64; @position = 19; initialized = true; ]
+        var HeartZoneBar_title as Symbol;
+        [ @file = "Rez.mc"; @line = 65; @position = 19; initialized = true; ]
+        var JeoFrielHZ as Symbol;
+        [ @file = "Rez.mc"; @line = 66; @position = 19; initialized = true; ]
+        var Zone1minValue_title as Symbol;
+        [ @file = "Rez.mc"; @line = 67; @position = 19; initialized = true; ]
+        var colorBlue as Symbol;
+        [ @file = "Rez.mc"; @line = 68; @position = 19; initialized = true; ]
+        var calcTypeHZ_title as Symbol;
+        [ @file = "Rez.mc"; @line = 69; @position = 19; initialized = true; ]
+        var manualHeartZone_title as Symbol;
+        [ @file = "Rez.mc"; @line = 70; @position = 19; initialized = true; ]
+        var UsaCyclingHZ as Symbol;
+        [ @file = "Rez.mc"; @line = 71; @position = 19; initialized = true; ]
+        var modeMax as Symbol;
+        [ @file = "Rez.mc"; @line = 72; @position = 19; initialized = true; ]
+        var colorOrange as Symbol;
+        [ @file = "Rez.mc"; @line = 73; @position = 19; initialized = true; ]
+        var colorPink as Symbol;
+        [ @file = "Rez.mc"; @line = 74; @position = 19; initialized = true; ]
+        var colorGray as Symbol;
+        [ @file = "Rez.mc"; @line = 75; @position = 19; initialized = true; ]
+        var labelPersonal as Symbol;
+        [ @file = "Rez.mc"; @line = 76; @position = 19; initialized = true; ]
+        var colorGreen as Symbol;
+        [ @file = "Rez.mc"; @line = 77; @position = 19; initialized = true; ]
+        var maxHeartRate_title as Symbol;
+        [ @file = "Rez.mc"; @line = 78; @position = 19; initialized = true; ]
+        var metric as Symbol;
+        [ @file = "Rez.mc"; @line = 79; @position = 19; initialized = true; ]
+        var colorLow as Symbol;
+        [ @file = "Rez.mc"; @line = 80; @position = 19; initialized = true; ]
+        var modeSmall as Symbol;
+        [ @file = "Rez.mc"; @line = 81; @position = 19; initialized = true; ]
+        var AndrewCogganHZ as Symbol;
+        [ @file = "Rez.mc"; @line = 82; @position = 19; initialized = true; ]
+        var Zone4maxValue_title as Symbol;
+    }
+}
+[ @file = "Rez.mc"; @line = 1; ]
+<init> {
+}

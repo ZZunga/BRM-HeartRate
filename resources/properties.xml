@@ -1,0 +1,153 @@
+<resources>
+
+    <properties>
+    	<property id="appVersion" type="string">1.2.5</property>
+        <property id="heartrateMode" type="number">0</property>
+        <property id="theme" type="number">1</property>
+        <property id="HeartZoneBar" type ="boolean">true</property>
+        <property id="HeartZoneHistory" type ="boolean">true</property>
+        <property id="calcHeartZone" type ="boolean">true</property>
+        <property id="calcTypeHZ" type="number">0</property>
+        <property id="maxHeartRate" type="number">180</property>
+        <property id="manualHeartZone" type ="boolean">false</property>
+        <property id="Zone1minValue" type ="number">117</property>
+        <property id="Zone1maxValue" type ="number">144</property>
+        <property id="Zone2maxValue" type ="number">160</property>
+        <property id="Zone3maxValue" type ="number">171</property>
+        <property id="Zone4maxValue" type ="number">189</property>
+        <property id="Zone5maxValue" type ="number">192</property>
+        <property id="averageMode" type="number">0</property>
+        <property id="fontSize" type="number">0</property>
+        <property id="threshold" type="number">5</property>
+        <property id="personalHeartrate" type="number">150</property>
+        <property id="colorHigh" type="number">3</property>
+        <property id="colorLow" type="number">0</property>
+
+    </properties>
+
+    <settings>
+        <setting propertyKey="@Properties.appVersion" title="@Strings.AppVersionTitle">
+        	<settingConfig type="alphaNumeric" readonly="true" />
+    	</setting>
+    		
+        <setting propertyKey="@Properties.theme" title="@Strings.themeTitle">
+            <settingConfig type="list">
+                <listEntry value="0">@Strings.themeNone</listEntry>
+                <listEntry value="1">@Strings.themeRed</listEntry>
+                <listEntry value="2">@Strings.themeRedInvert</listEntry>
+            </settingConfig>
+        </setting>
+
+		<setting propertyKey="@Properties.HeartZoneBar" title="@Strings.HeartZoneBar_title">
+			<settingConfig type="boolean" />
+		</setting>
+
+		<setting propertyKey="@Properties.HeartZoneHistory" title="@Strings.HeartZoneHistory_title">
+			<settingConfig type="boolean" />
+		</setting>
+
+		<setting propertyKey="@Properties.calcHeartZone" title="@Strings.calcHeartZone_title">
+			<settingConfig type="boolean" />
+		</setting>
+
+        <setting propertyKey="@Properties.calcTypeHZ" title="@Strings.calcTypeHZ_title">
+            <settingConfig type="list">
+                <listEntry value="0">@Strings.DefaultHZ</listEntry>
+                <listEntry value="1">@Strings.JeoFrielHZ</listEntry>
+                <listEntry value="2">@Strings.AndrewCogganHZ</listEntry>
+                <listEntry value="3">@Strings.UsaCyclingHZ</listEntry>
+                <listEntry value="4">@Strings.BritishCyclingHZ</listEntry>
+                <listEntry value="5">@Strings.StravaHZ</listEntry>
+                <listEntry value="6">@Strings.GarminHZ</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.maxHeartRate" title="@Strings.maxHeartRate_title">
+            <settingConfig type="numeric" min="100" max="250" />
+        </setting>
+		
+		<setting propertyKey="@Properties.manualHeartZone" title="@Strings.manualHeartZone_title">
+			<settingConfig type="boolean" />
+		</setting>
+
+        <setting propertyKey="@Properties.Zone1minValue" title="@Strings.Zone1minValue_title">
+            <settingConfig type="numeric" min="50" max="250" />
+        </setting>
+		
+        <setting propertyKey="@Properties.Zone1maxValue" title="@Strings.Zone1maxValue_title">
+            <settingConfig type="numeric" min="50" max="250" />
+        </setting>
+		
+        <setting propertyKey="@Properties.Zone2maxValue" title="@Strings.Zone2maxValue_title">
+            <settingConfig type="numeric" min="50" max="250" />
+        </setting>
+		
+        <setting propertyKey="@Properties.Zone3maxValue" title="@Strings.Zone3maxValue_title">
+            <settingConfig type="numeric" min="50" max="250" />
+        </setting>
+		
+        <setting propertyKey="@Properties.Zone4maxValue" title="@Strings.Zone4maxValue_title">
+            <settingConfig type="numeric" min="50" max="250" />
+        </setting>
+		
+        <setting propertyKey="@Properties.Zone5maxValue" title="@Strings.Zone5maxValue_title">
+            <settingConfig type="numeric" min="50" max="250" />
+        </setting>
+		
+        <setting propertyKey="@Properties.fontSize" title="@Strings.fontSize">
+            <settingConfig type="list">
+                <listEntry value="0">@Strings.modeSmall</listEntry>
+                <listEntry value="1">@Strings.modeLarge</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.averageMode" title="@Strings.averageMode">
+            <settingConfig type="list">
+                <listEntry value="0">@Strings.modeAvg</listEntry>
+                <listEntry value="1">@Strings.modeMax</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.heartrateMode" title="@Strings.heartrateMode">
+            <settingConfig type="list">
+                <listEntry value="0">@Strings.modeAverage</listEntry>
+                <listEntry value="1">@Strings.modePersonal</listEntry>
+            </settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.threshold" title="@Strings.threshold">
+            <settingConfig type="numeric" min="0" max="100" />
+        </setting>
+
+        <setting propertyKey="@Properties.personalHeartrate" title="@Strings.personalHeartrate">
+            <settingConfig type="numeric" min="0" max="250" />
+        </setting>
+
+        <setting propertyKey="@Properties.colorHigh" title="@Strings.colorHigh">
+        	<settingConfig type="list">
+        		<listEntry value="0">@Strings.colorRed</listEntry>
+        		<listEntry value="1">@Strings.colorOrange</listEntry>
+        		<listEntry value="2">@Strings.colorYellow</listEntry>
+        		<listEntry value="3">@Strings.colorGreen</listEntry>
+        		<listEntry value="4">@Strings.colorBlue</listEntry>
+        		<listEntry value="5">@Strings.colorPurple</listEntry>
+        		<listEntry value="6">@Strings.colorPink</listEntry>
+        		<listEntry value="7">@Strings.colorGray</listEntry>
+        	</settingConfig>
+        </setting>
+
+        <setting propertyKey="@Properties.colorLow" title="@Strings.colorLow">
+        	<settingConfig type="list">
+        		<listEntry value="0">@Strings.colorRed</listEntry>
+        		<listEntry value="1">@Strings.colorOrange</listEntry>
+        		<listEntry value="2">@Strings.colorYellow</listEntry>
+        		<listEntry value="3">@Strings.colorGreen</listEntry>
+        		<listEntry value="4">@Strings.colorBlue</listEntry>
+        		<listEntry value="5">@Strings.colorPurple</listEntry>
+        		<listEntry value="6">@Strings.colorPink</listEntry>
+        		<listEntry value="7">@Strings.colorGray</listEntry>
+        	</settingConfig>
+        </setting>
+        
+    </settings>
+</resources>
