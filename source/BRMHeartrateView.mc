@@ -20,6 +20,8 @@ class BRMHeartrateView extends WatchUi.DataField {
 	var fontHeight as Number or Null;
 	var HRlocX = 0 as Number;
 	var normalizeOn = false as Boolean;
+	
+	var max_line = 10.0 as Float;
 
     enum {
         THEME_NONE,
@@ -118,6 +120,7 @@ class BRMHeartrateView extends WatchUi.DataField {
         	default:
         		loc = [140, 2, 100,38, 78,38, 136,25, 138,17, 104,56, 82,56, 5, 14]; 
         }
+        max_line = loc[15].toFloat();
 	}
 	
     function compute(info as Activity.Info) as Void {
@@ -169,7 +172,7 @@ class BRMHeartrateView extends WatchUi.DataField {
         if (info has :timerState && HEARTZONEHISTORY) {
 			if (currentHeartZone > 0) {
         		hrzArray[currentHeartZone]++;
-        		if ( hrzArray[currentHeartZone] > loc[15] ) {
+        		if ( hrzArray[currentHeartZone] > max_line ) {
         			normalizeOn = true;
         		}
         	}
@@ -210,7 +213,8 @@ class BRMHeartrateView extends WatchUi.DataField {
 			Graphics.COLOR_BLUE,
 			Graphics.COLOR_PURPLE,
 			Graphics.COLOR_PINK,
-			Graphics.COLOR_LT_GRAY
+			Graphics.COLOR_LT_GRAY,
+			Graphics.COLOR_PINK
 		];
 		var DarkFontColor = [
 			Graphics.COLOR_DK_RED,
@@ -220,7 +224,8 @@ class BRMHeartrateView extends WatchUi.DataField {
 			Graphics.COLOR_DK_BLUE,
 			Graphics.COLOR_PURPLE,
 			Graphics.COLOR_PINK,
-			Graphics.COLOR_DK_GRAY
+			Graphics.COLOR_DK_GRAY,
+			Graphics.COLOR_DK_RED
 		];
 
 	   	var fastColorValue = Application.Properties.getValue("colorHigh");
@@ -473,18 +478,18 @@ class BRMHeartrateView extends WatchUi.DataField {
 			Graphics.COLOR_DK_GRAY,
 	        Graphics.COLOR_LT_GRAY,
     	    Graphics.COLOR_BLUE,
-        	Graphics.COLOR_DK_GREEN,
+        	Graphics.COLOR_GREEN,
         	Graphics.COLOR_YELLOW,
     	    Graphics.COLOR_RED
 		];
 		if (bgColor == Graphics.COLOR_BLACK) {
 			heartZoneColor = [
-				Graphics.COLOR_LT_GRAY,
-		        Graphics.COLOR_LT_GRAY,
-    		    Graphics.COLOR_BLUE,
-        		Graphics.COLOR_GREEN,
-        		Graphics.COLOR_YELLOW,
-    		    Graphics.COLOR_RED
+				Graphics.COLOR_DK_GRAY,
+		        Graphics.COLOR_DK_GRAY,
+    		    Graphics.COLOR_DK_BLUE,
+        		Graphics.COLOR_DK_GREEN,
+        		Graphics.COLOR_ORANGE,
+    		    Graphics.COLOR_DK_RED
 			];
 		}
 		if (loc[0]==115) {
@@ -534,11 +539,19 @@ class BRMHeartrateView extends WatchUi.DataField {
 			avgHR = averageHeartRate.format("%d");
 		} else { avgHR = ""; }
         var hrtMode = Application.Properties.getValue("heartrateMode");
-		var label = hrtMode == MODE_AVERAGE ? loadResource(Rez.Strings.labelAvg) : loadResource(Rez.Strings.labelPersonal);
+		var averagemode = Application.Properties.getValue("averageMode");
+		var label;
+		if (hrtMode == MODE_AVERAGE) {
+			label = loadResource(Rez.Strings.labelAvg);
+			if (averagemode == 1) {
+				label = loadResource(Rez.Strings.labelMax);
+			}
+		} else {
+			label = loadResource(Rez.Strings.labelPersonal);
+		}
 		var smallFont = (Application.Properties.getValue("fontSize") == 0);
 		var title1 = loadResource(Rez.Strings.title);
 		var title2;
-		var averagemode = Application.Properties.getValue("averageMode");
 		switch(averagemode) {
 			case 0:		title2 = loadResource(Rez.Strings.modeAvg);		break;
 			case 1:		title2 = loadResource(Rez.Strings.modeMax);		break;
@@ -562,7 +575,7 @@ class BRMHeartrateView extends WatchUi.DataField {
 				avv = [loc[8], loc[9], fnt[1], avgHR];
 				mtv = [loc[12], loc[13], 0,0, fnt[3], metric];
 				lbv = [loc[8], loc[11], fnt[3], label];
-				hzv = [loc[14], loc[1], fnt[1]];
+				hzv = [loc[14], loc[1], fnt[2]];
 				ttv = [width * 0.5 + HRlocX, loc[1], fnt[3], title];
 			} else {
 				hrv = [loc[2], loc[3], fnt[0]];
@@ -649,7 +662,7 @@ class BRMHeartrateView extends WatchUi.DataField {
 
 		if (maxAA > 0 && normalizeOn) {
 			for (var inc_j = 0; inc_j < 6; inc_j++) {
-				hrzNArray[inc_j] = hrzArray[inc_j] / maxAA * loc[15];
+				hrzNArray[inc_j] = hrzArray[inc_j] / maxAA * max_line;
 			} 
 		}
 		return hrzNArray;

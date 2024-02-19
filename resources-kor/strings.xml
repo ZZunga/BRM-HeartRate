@@ -1,9 +1,10 @@
 <strings>
-    <string id="AppName">BRM Heartrate</string>
+    <string id="AppName">BRM 심박</string>
     <string id="title">심박</string>
     <string id="AppVersionTitle">버전 정보</string>
     <string id="metric">bpm</string>
     <string id="labelAvg">평균</string>
+    <string id="labelMax">최대</string>
     <string id="labelPersonal">개인</string>
     <string id="HeartZoneBar_title">데이터필드 아래쪽에 심박존 표시</string>
     <string id="HeartZoneHistory_title">심박존 히스토리 표시</string>
@@ -49,4 +50,5 @@
 	<string id="colorPurple">자주색</string>
 	<string id="colorPink">분홍색</string>
 	<string id="colorGray">회색/어두운 회색(야간/주간)</string>
+	<string id="colorDefault">분홍색/어두운 빨간색(야간/주간)</string>
 </strings>

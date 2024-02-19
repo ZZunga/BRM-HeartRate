@@ -1,0 +1,87 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var LauncherIcon as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_custom_drawable_12665780877997271301 = new Background();
+
+            var rez_cmp_local_text_title = new WatchUi.Text({:identifier=>"title", :color=>Graphics.COLOR_BLACK, :locX=>(dc.getWidth() * 0.5), :locY=>2, :justification=>Graphics.TEXT_JUSTIFY_CENTER, :font=>Graphics.FONT_TINY});
+
+            var rez_cmp_local_text_heartrate = new WatchUi.Text({:identifier=>"heartrate", :color=>Graphics.COLOR_BLACK, :locX=>60, :locY=>38, :justification=>Graphics.TEXT_JUSTIFY_RIGHT, :font=>Graphics.FONT_NUMBER_MEDIUM});
+
+            return [rez_cmp_local_custom_drawable_12665780877997271301, rez_cmp_local_text_title, rez_cmp_local_text_heartrate] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Menus {
+    } // Menus
+
+    module Strings {
+        (:initialized) var colorPurple as Symbol;
+        (:initialized) var StravaHZ as Symbol;
+        (:initialized) var labelAvg as Symbol;
+        (:initialized) var threshold as Symbol;
+        (:initialized) var BritishCyclingHZ as Symbol;
+        (:initialized) var modeAvg as Symbol;
+        (:initialized) var themeRed as Symbol;
+        (:initialized) var themeTitle as Symbol;
+        (:initialized) var DefaultHZ as Symbol;
+        (:initialized) var Zone3maxValue_title as Symbol;
+        (:initialized) var averageMode as Symbol;
+        (:initialized) var AppVersionTitle as Symbol;
+        (:initialized) var modeAverage as Symbol;
+        (:initialized) var themeNone as Symbol;
+        (:initialized) var colorHigh as Symbol;
+        (:initialized) var personalHeartrate as Symbol;
+        (:initialized) var colorRed as Symbol;
+        (:initialized) var Zone1maxValue_title as Symbol;
+        (:initialized) var Zone2maxValue_title as Symbol;
+        (:initialized) var modeLarge as Symbol;
+        (:initialized) var HeartZoneHistory_title as Symbol;
+        (:initialized) var fontSize as Symbol;
+        (:initialized) var heartrateMode as Symbol;
+        (:initialized) var Zone5maxValue_title as Symbol;
+        (:initialized) var modePersonal as Symbol;
+        (:initialized) var GarminHZ as Symbol;
+        (:initialized) var colorYellow as Symbol;
+        (:initialized) var colorDefault as Symbol;
+        (:initialized) var title as Symbol;
+        (:initialized) var calcHeartZone_title as Symbol;
+        (:initialized) var themeRedInvert as Symbol;
+        (:initialized) var AppName as Symbol;
+        (:initialized) var HeartZoneBar_title as Symbol;
+        (:initialized) var JeoFrielHZ as Symbol;
+        (:initialized) var Zone1minValue_title as Symbol;
+        (:initialized) var colorBlue as Symbol;
+        (:initialized) var calcTypeHZ_title as Symbol;
+        (:initialized) var manualHeartZone_title as Symbol;
+        (:initialized) var UsaCyclingHZ as Symbol;
+        (:initialized) var modeMax as Symbol;
+        (:initialized) var colorOrange as Symbol;
+        (:initialized) var labelMax as Symbol;
+        (:initialized) var colorPink as Symbol;
+        (:initialized) var colorGray as Symbol;
+        (:initialized) var labelPersonal as Symbol;
+        (:initialized) var colorGreen as Symbol;
+        (:initialized) var maxHeartRate_title as Symbol;
+        (:initialized) var metric as Symbol;
+        (:initialized) var colorLow as Symbol;
+        (:initialized) var modeSmall as Symbol;
+        (:initialized) var AndrewCogganHZ as Symbol;
+        (:initialized) var Zone4maxValue_title as Symbol;
+    } // Strings
+} // Rez

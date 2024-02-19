@@ -1,27 +1,27 @@
 <resources>
 
     <properties>
-    	<property id="appVersion" type="string">1.2.5</property>
+    	<property id="appVersion" type="string">1.2.9</property>
         <property id="heartrateMode" type="number">0</property>
         <property id="theme" type="number">1</property>
         <property id="HeartZoneBar" type ="boolean">true</property>
         <property id="HeartZoneHistory" type ="boolean">true</property>
         <property id="calcHeartZone" type ="boolean">true</property>
         <property id="calcTypeHZ" type="number">0</property>
-        <property id="maxHeartRate" type="number">180</property>
+        <property id="maxHeartRate" type="number">200</property>
         <property id="manualHeartZone" type ="boolean">false</property>
-        <property id="Zone1minValue" type ="number">117</property>
-        <property id="Zone1maxValue" type ="number">144</property>
-        <property id="Zone2maxValue" type ="number">160</property>
-        <property id="Zone3maxValue" type ="number">171</property>
-        <property id="Zone4maxValue" type ="number">189</property>
-        <property id="Zone5maxValue" type ="number">192</property>
+        <property id="Zone1minValue" type ="number">130</property>
+        <property id="Zone1maxValue" type ="number">160</property>
+        <property id="Zone2maxValue" type ="number">178</property>
+        <property id="Zone3maxValue" type ="number">190</property>
+        <property id="Zone4maxValue" type ="number">200</property>
+        <property id="Zone5maxValue" type ="number">214</property>
         <property id="averageMode" type="number">0</property>
         <property id="fontSize" type="number">0</property>
         <property id="threshold" type="number">5</property>
         <property id="personalHeartrate" type="number">150</property>
         <property id="colorHigh" type="number">3</property>
-        <property id="colorLow" type="number">0</property>
+        <property id="colorLow" type="number">8</property>
 
     </properties>
 
@@ -146,6 +146,7 @@
         		<listEntry value="5">@Strings.colorPurple</listEntry>
         		<listEntry value="6">@Strings.colorPink</listEntry>
         		<listEntry value="7">@Strings.colorGray</listEntry>
+				<listEntry value="8">@Strings.colorDefault</listEntry>
         	</settingConfig>
         </setting>
         

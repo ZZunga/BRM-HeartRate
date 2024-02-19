@@ -4,6 +4,7 @@
     <string id="AppVersionTitle">Version</string>
     <string id="metric">bpm</string>
     <string id="labelAvg">avg</string>
+    <string id="labelMax">max</string>
     <string id="labelPersonal">per</string>
     <string id="HeartZoneBar_title">Show Heartrate Zone Bars at the bottom of field</string>
     <string id="HeartZoneHistory_title">Show Heartrate Zone History</string>
@@ -49,4 +50,5 @@
 	<string id="colorPurple">Purple Color</string>
 	<string id="colorPink">Pink Color</string>
 	<string id="colorGray">Light Gray/Dark Gray Color</string>
+	<string id="colorDefault">Pink/Dark Red Color</string>
 </strings>
